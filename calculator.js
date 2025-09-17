@@ -1,6 +1,6 @@
 //x and y are inputs
-let resultTable = getElementById("resultsTable"); //result table
-let summaryTable = getElementById("summaryTable"); //summary table
+let resultTable = document.getElementById("resultsTable"); //result table
+let summaryTable = document.getElementById("summaryTable"); //summary table
 let goodResults = []; //array for all the valid results input
 
 
@@ -22,22 +22,22 @@ while (true){ //while ok/continue has been pressed and cancel is unpressed
     else {
         switch (operator) { //for each of the valid arithmetic operators, do that operation
             case "+": //add
-                result = xval + yval; break;
+                result = x + y; break;
             case "-": //sub
-                result = xval - yval; break;
+                result = x - y; break;
             case "%": //mod
-                result = xval % yval; break;
+                result = x % y; break;
             case "/": //divide
-                result = xval / yval; break;
+                result = x / y; break;
             case "*": //multiply
-                result = xval * yval; break;
+                result = x * y; break;
             default:
                 result = "Error: Invalid arithmetic operation input.";
         }
     }
 
     let row = resultTable.insertRow(); //adding a new row to result table 
-    row.insertCell(0).textContet = x; 
+    row.insertCell(0).textContent = x; 
     row.insertCell(1).textContent = y;
     row.insertCell(2).textContent = operator;
     row.insertCell(3).textContent = result;
@@ -59,7 +59,7 @@ if (goodResults.length > 0){
     sumRow.insertCell(2).textContent = avg.toFixed(2);
     sumRow.insertCell(3).textContent = sum;
 
-    summaryTable.style.display = "Summary Table";
+    summaryTable.style.display = "table";
 }
 /* 
 why isnt it prompting on the website...
