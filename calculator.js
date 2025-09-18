@@ -40,10 +40,10 @@ while (true){ //while ok/continue has been pressed and cancel is unpressed
     row.insertCell(0).textContent = xval; 
     row.insertCell(1).textContent = yval;
     row.insertCell(2).textContent = operator;
-    row.insertCell(3).textContent = result.toFixed(2);
+    row.insertCell(3).textContent = result;
 
     if (typeof result == "number"){ //if inputs were valid, add to array
-        goodResults.push(result);
+        goodResults.push(result.toFixed(2));
     } 
 }
 
