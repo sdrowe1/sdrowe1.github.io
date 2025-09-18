@@ -43,7 +43,7 @@ while (true){ //while ok/continue has been pressed and cancel is unpressed
     row.insertCell(3).textContent = result;
 
     if (typeof result == "number"){ //if inputs were valid, add to array
-        goodResults.push(result.toFixed(2));
+        goodResults.push(result);
     } 
 }
 
@@ -51,14 +51,15 @@ if (goodResults.length > 0){
     let min = Math.min(...goodResults);//the minimum of all results
     let max = Math.max(...goodResults);//the maximum of all results
     let sum = goodResults.reduce((a, b) => a +b, 0); //Adding all the results together
-    let avg = sum/goodResults.length.toFixed(2);
+    let avg = sum/goodResults.length;
 
     let sumRow = summaryTable.insertRow();
     sumRow.insertCell(0).textContent = min;
     sumRow.insertCell(1).textContent = max;
-    sumRow.insertCell(2).textContent = avg;
+    sumRow.insertCell(2).textContent = avg.toFixed(2);
     sumRow.insertCell(3).textContent = sum;
 
     summaryTable.style.display = "table";
 }
-//for html-center tables 
+//
+//html-fix result table and add summarytable header
