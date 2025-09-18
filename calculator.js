@@ -40,7 +40,7 @@ while (true){ //while ok/continue has been pressed and cancel is unpressed
     row.insertCell(0).textContent = xval; 
     row.insertCell(1).textContent = yval;
     row.insertCell(2).textContent = operator;
-    row.insertCell(3).textContent = result;
+    row.insertCell(3).textContent = result.toFixed(2);
 
     if (typeof result == "number"){ //if inputs were valid, add to array
         goodResults.push(result);
@@ -56,12 +56,11 @@ if (goodResults.length > 0){
     let sumRow = summaryTable.insertRow();
     sumRow.insertCell(0).textContent = min;
     sumRow.insertCell(1).textContent = max;
-    sumRow.insertCell(2).textContent = avg.toFixed(2);
+    sumRow.insertCell(2).textContent = avg;
     sumRow.insertCell(3).textContent = sum;
 
     summaryTable.style.display = "table";
 }
 /* 
-styling ofc
-display on table
+
 */
