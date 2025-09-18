@@ -44,8 +44,7 @@ while (true){ //while ok/continue has been pressed and cancel is unpressed
 
     if (typeof result == "number"){ //if inputs were valid, add to array
         goodResults.push(result);
-    }  
-    contLoop = confirm("Do you want to enter another calculation?");
+    } 
 }
 
 if (goodResults.length > 0){
