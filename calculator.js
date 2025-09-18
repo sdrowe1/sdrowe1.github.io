@@ -61,6 +61,3 @@ if (goodResults.length > 0){
 
     summaryTable.style.display = "table";
 }
-/* 
-
-*/
