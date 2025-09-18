@@ -4,25 +4,34 @@
         <title> Calculator </title> 
         <style> 
             body {
-                background-color: azure;
+                background-color: bisque;
             }
             table, th, td {
+                margin-left: auto;
+                margin-right: auto;
                 align-content: center;
                 border: 3px solid black;
-                border-collapse: collapse;
+                padding: 30px;
+                width: auto;
+                height: auto;
                 text-align: center;
+                text-decoration: solid;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
             th{
-                background-color: beige;
+                background-color: rgb(144, 4, 74);
+                color: white;
+            }
+            td{
+                background-color: white;
             }
         </style>
     </head>
     <body>
         <h1 style="text-align: center;"> The Calculator </h1>
 
-        <h2>Results Table</h2> <!-- Result Table -->
-        <table id ="resultTable"> 
+        <h2 style="background-color: rgb(144, 4, 74); color: white; text-align: center;">Results Table</h2> <!-- Result Table -->
+        <table id ="resultsTable"> 
             <tr> 
                 <th> X </th>
                 <th> Y </th>
@@ -30,7 +39,8 @@
                 <th> Result </th>
             </tr>
         </table>
-
+        <br> 
+        <h2 style="text-align: center; background-color: rgb(144, 4, 74); color: white;"> Summary Table </h2>
         <table id="summaryTable" style="display: none;">
             <tr> 
                 <th> Minimum </th>
@@ -43,8 +53,3 @@
         <p style="font-size: large; text-align: center;"><a href="index.html" style="font-size: large; text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> Link to Index</a> </p><!--link to index page-->
     </body>
 </html>
-
-<!--
-Formatting and styling
-why its 
--->
