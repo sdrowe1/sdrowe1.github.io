@@ -2,13 +2,14 @@
 let resultTable = document.getElementById("resultsTable"); //result table
 let summaryTable = document.getElementById("summaryTable"); //summary table
 let goodResults = []; //array for all the valid results input
+let contLoop = true;
 
 while (true){ //while ok/continue has been pressed and cancel is unpressed
     let xval = prompt("Enter x value. (Numbers only)");
     if (xval == null) break;
     let yval = prompt("Enter y value. (Numbers only)");
     if (yval == null) break;
-    let operator = prompt("Choose an operator. (Add+, Sub-, Mod%, Divide/ or Multiply *");
+    let operator = prompt("Choose an operator. (Add+, Sub-, Mod%, Divide/ or Multiply *)");
     if (operator == null) break; 
 
     let result;
@@ -44,6 +45,7 @@ while (true){ //while ok/continue has been pressed and cancel is unpressed
     if (typeof result == "number"){ //if inputs were valid, add to array
         goodResults.push(result);
     }  
+    contLoop = confirm("Do you want to enter another calculation?");
 }
 
 if (goodResults.length > 0){
@@ -61,7 +63,6 @@ if (goodResults.length > 0){
     summaryTable.style.display = "table";
 }
 /* 
-prompts once
 styling ofc
 display on table
 */
