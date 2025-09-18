@@ -3,9 +3,7 @@ let resultTable = document.getElementById("resultsTable"); //result table
 let summaryTable = document.getElementById("summaryTable"); //summary table
 let goodResults = []; //array for all the valid results input
 
-let continuing = true;
-
-while (continuing){ //while ok/continue has been pressed and cancel is unpressed
+while (true){ //while ok/continue has been pressed and cancel is unpressed
     let xval = prompt("Enter x value. (Numbers only)");
     if (xval == null) break;
     let yval = prompt("Enter y value. (Numbers only)");
@@ -13,7 +11,7 @@ while (continuing){ //while ok/continue has been pressed and cancel is unpressed
     let operator = prompt("Choose an operator. (Add+, Sub-, Mod%, Divide/ or Multiply *");
     if (operator == null) break; 
 
-    //let result;
+    let result;
     let x = Number(xval); //changing x and y to numbers for computation
     let y = Number(yval);
 
@@ -38,8 +36,8 @@ while (continuing){ //while ok/continue has been pressed and cancel is unpressed
     }
 
     let row = resultTable.insertRow(); //adding a new row to result table 
-    row.insertCell(0).textContent = x; 
-    row.insertCell(1).textContent = y;
+    row.insertCell(0).textContent = xval; 
+    row.insertCell(1).textContent = yval;
     row.insertCell(2).textContent = operator;
     row.insertCell(3).textContent = result;
 
