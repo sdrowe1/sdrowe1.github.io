@@ -61,5 +61,4 @@ if (goodResults.length > 0){
 
     summaryTable.style.display = "table";
 }
-//
 //html-fix result table and add summarytable header
