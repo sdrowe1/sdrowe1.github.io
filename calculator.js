@@ -3,8 +3,9 @@ let resultTable = document.getElementById("resultsTable"); //result table
 let summaryTable = document.getElementById("summaryTable"); //summary table
 let goodResults = []; //array for all the valid results input
 
+let continuing = true;
 
-while (true){ //while ok/continue has been pressed and cancel is unpressed
+while (continuing){ //while ok/continue has been pressed and cancel is unpressed
     let xval = prompt("Enter x value. (Numbers only)");
     if (xval == null) break;
     let yval = prompt("Enter y value. (Numbers only)");
@@ -12,7 +13,7 @@ while (true){ //while ok/continue has been pressed and cancel is unpressed
     let operator = prompt("Choose an operator. (Add+, Sub-, Mod%, Divide/ or Multiply *");
     if (operator == null) break; 
 
-    let result;
+    //let result;
     let x = Number(xval); //changing x and y to numbers for computation
     let y = Number(yval);
 
@@ -62,6 +63,7 @@ if (goodResults.length > 0){
     summaryTable.style.display = "table";
 }
 /* 
-why isnt it prompting on the website...
+prompts once
 styling ofc
+display on table
 */
