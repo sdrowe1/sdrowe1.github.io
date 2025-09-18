@@ -51,7 +51,7 @@ if (goodResults.length > 0){
     let min = Math.min(...goodResults);//the minimum of all results
     let max = Math.max(...goodResults);//the maximum of all results
     let sum = goodResults.reduce((a, b) => a +b, 0); //Adding all the results together
-    let avg = sum/goodResults.length;
+    let avg = sum/goodResults.length.toFixed(2);
 
     let sumRow = summaryTable.insertRow();
     sumRow.insertCell(0).textContent = min;
@@ -61,3 +61,4 @@ if (goodResults.length > 0){
 
     summaryTable.style.display = "table";
 }
+//for html-center tables 
