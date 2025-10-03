@@ -1,4 +1,3 @@
-//x and y are inputs
 let resultTable = document.getElementById("resultsTable"); //result table
 let summaryTable = document.getElementById("summaryTable"); //summary table
 let goodResults = []; //array for all the valid results input
@@ -61,4 +60,3 @@ if (goodResults.length > 0){
 
     summaryTable.style.display = "table";
 }
-//html-fix result table and add summarytable header
